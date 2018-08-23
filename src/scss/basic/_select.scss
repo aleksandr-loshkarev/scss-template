@@ -1,0 +1,81 @@
+select {
+  display: block;
+  @include clearSelect;
+  cursor: pointer;
+  color: #888888;
+  border-radius: 8px;
+}
+
+.jq-selectbox {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+
+  &__select {
+    padding-left: 10px;
+    line-height: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    &-text {
+      color: #888;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  &__trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 5.5px 0 5.5px;
+      border-color: #636363 transparent transparent transparent;
+    }
+  }
+
+  &__dropdown {
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  ul {
+    height: 140px;
+  }
+
+  li {
+    margin-bottom: 3px;
+    padding: 2px 5px;
+    color: $default;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+
+    &.sel {
+      color: $white;
+      background-color: $main;
+    }
+
+    &:hover {
+      background-color: rgba($main, .25);
+    }
+  }
+}

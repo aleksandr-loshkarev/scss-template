@@ -1,0 +1,43 @@
+// mixin placeholder color
+@mixin placeholderColor($input-text-color) {
+  &::-webkit-input-placeholder {color: $input-text-color;}
+  &:-moz-placeholder {color: $input-text-color; opacity: 1;}
+  &::-moz-placeholder {color: $input-text-color; opacity: 1;}
+  &:-ms-input-placeholder {color: $input-text-color;}
+  &::placeholder {color: $input-text-color; opacity: 1;}
+  &:focus:-moz-placeholder {color:transparent; opacity: 1;}
+  &:focus::-moz-placeholder {color:transparent; opacity: 1;}
+  &:focus::-webkit-input-placeholder {color:transparent;}
+  &:focus:-ms-input-placeholder {color:transparent;}
+  &:focus::placeholder {color:transparent;}
+}
+
+// mixin for select
+@mixin clearSelect {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+// mixin responsive
+@mixin b($point) {
+  @if $point == tablet {
+    @media (max-width: 1023px) { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 767px)  { @content ; }
+  }
+  @else {
+    @media (max-width: $point + 'px')  { @content ; }
+  }
+}
+
+// mixin for ie9
+@mixin ie() {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content ;
+  }
+}

@@ -1,0 +1,107 @@
+extends template/page-template
+
+block head
+    - var title = "Template page"
+
+block content
+
+    .wrapper
+
+        - var fixed = true
+        include ../modules/header/header.pug
+
+        .container
+            h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            h5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            h6 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            p Lorem ipsum <strong>dolor sit amet</strong>, consectetur <a href="#">adipiscing elit.</a> Morbi enim ante, aliquam sit amet purus quis, gravida suscipit odio. Phasellus in fermentum urna, quis finibus mauris. Sed lobortis nibh id urna elementum, vitae eleifend elit lacinia. Nullam rutrum tellus arcu, nec consequat orci vulputate vitae. Vivamus vitae ipsum risus. Ut lacus quam, iaculis nec tortor id, porta gravida tellus. Proin lectus sapien, tempor a fermentum sit amet, molestie a mi. Suspendisse consectetur varius mi euismod sodales. Nullam hendrerit diam sit amet dignissim ultrices. Ut venenatis elementum est. Nunc fermentum commodo sapien, sit amet venenatis urna. Sed non iaculis eros. Suspendisse potenti. Nullam luctus pellentesque semper. Suspendisse facilisis enim ut libero sodales, vitae tincidunt enim pulvinar.
+
+            p Integer <b>cursus</b> quis est sed sodales. Ut finibus scelerisque tortor sit amet tincidunt. Aenean maximus bibendum posuere. Maecenas imperdiet massa et bibendum sodales. Sed porta elementum erat ut malesuada. Duis rutrum dui malesuada pulvinar ullamcorper. Phasellus non scelerisque nisi.
+
+            hr
+
+            blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            q Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            ol
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+
+            ul
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                button(type="submit") button
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                a(href="#").btn btn
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                a(href="#", disabled).btn btn disabled
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                input(type="text", placeholder="input")
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                input.error(type="text", placeholder="input error")
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                input(type="text", placeholder="input disabled", disabled)
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                textarea(placeholder="textarea")
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                select(name="select", data-palceholder="custom select")
+                    option(value="")
+                    option(value="") Lorem 1
+                    option(value="") Lorem 2
+                    option(value="") Lorem 3
+                    option(value="") Lorem 4
+                    option(value="") Lorem 5
+                    option(value="") Lorem 6
+                    option(value="") Lorem 7
+                    option(value="") Lorem 8
+                    option(value="") Lorem 9
+                    option(value="") Lorem 10
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                label.checkbox
+                    input(type="checkbox", name="checkbox")
+                    span checkox 1
+
+                label.checkbox
+                    input(type="checkbox", name="checkbox" disabled)
+                    span checkox 2
+
+                label.checkbox
+                    input(type="checkbox", name="checkbox")
+                    span checkox 3
+
+            div(style="margin-top: 10px; margin-bottom: 10px;")
+                label.radio
+                    input(type="radio", name="radio")
+                    span radio 1
+
+                label.radio
+                    input(type="radio", name="radio", disabled)
+                    span radio 2
+
+                label.radio
+                    input(type="radio", name="radio")
+                    span radio 3
+
+    include ../modules/footer/footer.pug

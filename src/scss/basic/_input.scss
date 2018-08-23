@@ -1,0 +1,39 @@
+input,
+select,
+textarea {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  -webkit-appearance: none;
+  font-size: 14px;
+  line-height: 48px;
+  @include placeholderColor(#888);
+  transition: all .2s ease-in;
+
+  &:focus {
+    outline: none;
+    border-color: $main;
+  }
+
+  &.error {
+    color: #b70000;
+    border-color: #b70000;
+    @include placeholderColor(#b70000);
+  }
+
+  &.disabled,
+  &[disabled="disabled"],
+  &[disabled] {
+    background-color: rgba(189, 189, 189, 0.623);
+  }
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
