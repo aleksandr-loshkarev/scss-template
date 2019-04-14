@@ -6,6 +6,7 @@ module.exports = [
     './gulp/tasks/scripts',
     './gulp/tasks/img',
     './gulp/tasks/svg',
+    './gulp/tasks/png',
     './gulp/tasks/del',
     './gulp/tasks/fonts'
 ];
