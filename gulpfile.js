@@ -7,7 +7,9 @@ global.$ = {
   bulkSass: require('gulp-sass-glob-import'),
 
   path: {
-    tasks: require('./gulp/config/tasks.js')
+    tasks: require('./gulp/config/tasks.js'),
+    jsLibraries: require('./gulp/libraries.script.js'),
+    stylesLibraries: require('./gulp/libraries.styles.css')
   }
 };
 

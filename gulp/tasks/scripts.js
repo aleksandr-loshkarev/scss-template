@@ -1,6 +1,6 @@
 module.exports = function () {
   $.gulp.task('scripts:lib', function() {
-    return $.gulp.src(['node_modules/jquery/dist/jquery.min.js'])
+    return $.gulp.src($.path.jsLibraries)
         .pipe($.gp.concat('libs.min.js'))
         .pipe($.gulp.dest('build/js/'))
         .pipe($.bs.reload({
@@ -9,8 +9,8 @@ module.exports = function () {
   });
 
   $.gulp.task('scripts:plugin', function() {
-    return $.gulp.src('src/scripts/plugins/*.js')
-        .pipe($.gp.concat('plugins.min.js'))
+    return $.gulp.src('src/scripts/plugins/**/*.js')
+        .pipe($.gp.concat('plugins.js'))
         .pipe($.gulp.dest('build/js/'))
         .pipe($.bs.reload({
           stream: true
@@ -18,7 +18,8 @@ module.exports = function () {
   });
 
   $.gulp.task('scripts', function() {
-    return $.gulp.src('src/scripts/main.js')
+    return $.gulp.src('src/modules/**/**/*.js')
+        .pipe($.gp.concat('main.js'))
         .pipe($.gulp.dest('build/js/'))
         .pipe($.bs.reload({
           stream: true
