@@ -1,0 +1,14 @@
+.header {
+  padding: 10px;
+  background-color: #3f3f3f;
+
+  li {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+      color: $white;
+    }
+  }
+}

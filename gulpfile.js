@@ -9,7 +9,7 @@ global.$ = {
   path: {
     tasks: require('./gulp/config/tasks.js'),
     jsLibraries: require('./gulp/libraries.script.js'),
-    stylesLibraries: require('./gulp/libraries.styles.css')
+    stylesLibraries: require('./gulp/libraries.styles.js')
   }
 };
 
@@ -19,11 +19,11 @@ $.path.tasks.forEach(function (taskPath) {
 
 $.gulp.task('dev',$.gulp.series(
     $.gulp.parallel('clean'),
-    $.gulp.parallel('pug','sass','scripts:lib','scripts:plugin','scripts','img','svg','fonts'),
+    $.gulp.parallel('pug','sass','sass:lib','scripts:lib','scripts','img','svg','fonts'),
     $.gulp.parallel('watch','serve')
 ));
 
 $.gulp.task('build',$.gulp.series(
     $.gulp.parallel('clean'),
-    $.gulp.parallel('pug','sass','scripts:lib','scripts:plugin','scripts','img','svg','fonts')
+    $.gulp.parallel('pug','sass','sass:lib','scripts:lib','scripts','img','svg','fonts')
 ));

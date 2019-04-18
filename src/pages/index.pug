@@ -1,15 +1,15 @@
 extends template/page-template
 
 block head
-    - var title = "Main page"
+  - var title = "Main page"
 
 block content
 
-    .wrapper
+  .wrapper
+    include ../modules/header/header
 
-        - var fixed = true
-        include ../modules/header/header.pug
-
-        .container
-            
-    include ../modules/footer/footer.pug
+    .container
+      img(src="images/cat.jpg", alt=""
+      style="display: block; margin: 0 auto; max-width: 100%;")
+          
+  include ../modules/footer/footer

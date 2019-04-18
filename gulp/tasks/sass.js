@@ -11,8 +11,7 @@ module.exports = function () {
           message: "Error: <%= error.message %>",
           title: "sass"
         }))
-        .pipe($.gp.csso())
-        .pipe($.gp.sourcemaps.write())
+        .pipe($.gp.sourcemaps.write('/map'))
         .pipe($.gulp.dest('build/css/'))
         .pipe($.bs.reload({
           stream: true

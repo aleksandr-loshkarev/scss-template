@@ -1,12 +1,8 @@
 @import "../../node_modules/reset-css/sass/_reset";
 
-@import "libs";
-
-@import "basic/_fonts";
-
 @import "config/_mixins";
 
-@import "plugins/*.scss";
+@import "basic/_fonts";
 
 @import "basic/_variables";
 @import "basic/_typography";
