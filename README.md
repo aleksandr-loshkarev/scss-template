@@ -4,5 +4,5 @@
 
 add node plugins:
 - gulp
-  |_libraries.script.js (components JavaScript)
-  |_libraries.styles.js (components SCSS)
+  -libraries.script.js (components JavaScript)
+  -libraries.styles.js (components SCSS)
