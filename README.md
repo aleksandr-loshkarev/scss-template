@@ -1,8 +1,8 @@
 *start develop*
 - `npm i`
-- `gulp dev`
+- `gulp dev` - launches development environment
+- `gulp build` - final build of the project
 
 add node plugins:
-- gulp
-  -libraries.script.js (components JavaScript)
-  -libraries.styles.js (components SCSS)
+- libraries.script.js (components JavaScript)
+- libraries.styles.js (components SCSS)
